@@ -1,12 +1,11 @@
 import UserController from '@/controllers/user.controller'
-import AuthMiddleware from '@/middlewares/auth.middleware'
 import { Router } from 'express'
+import { uploadSingleS3 } from '@/middlewares/multer.middleware'
 
-const { me } = new UserController()
-const { authenticate } = new AuthMiddleware()
+const { createUser } = new UserController()
 
 const router = Router()
 
-router.get('/me', authenticate, me)
+router.post('/', uploadSingleS3(), createUser)
 
 export default router

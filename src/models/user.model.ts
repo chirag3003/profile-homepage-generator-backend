@@ -5,7 +5,6 @@ const userSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
     },
     name: {
       type: String,
@@ -16,20 +15,11 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    phoneNo: {
-      type: Number,
-    },
-    creator: {
-      type: Boolean,
-      default: false,
-    },
-    hash: {
+    github: {
       type: String,
-      required: true,
     },
-    salt: {
+    linkedIn: {
       type: String,
-      required: true,
     },
   },
   {

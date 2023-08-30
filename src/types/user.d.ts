@@ -3,5 +3,6 @@ interface IUser {
   email: string
   name: string
   username: string
-  creator: boolean
+  github?: string
+  linkedIn?: string
 }
