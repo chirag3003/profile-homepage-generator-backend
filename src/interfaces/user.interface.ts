@@ -3,6 +3,8 @@ import { CreateUserInput } from '@/validators/user.validator'
 
 export interface IUserController {
   createUser(req: Request, res: Response): Promise<void>
+
+  getUserByUsername(req: Request, res: Response): Promise<void>
 }
 
 export interface IUserService {
@@ -10,5 +12,7 @@ export interface IUserService {
 
   getUserById(id: string): Promise<IUser | null>
 
-  createUser(user: CreateUserInput): Promise<IUser>
+  getUserByUsername(username: string): Promise<IUser | null>
+
+  createUser(user: CreateUserInput, images: string[]): Promise<IUser>
 }

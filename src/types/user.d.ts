@@ -6,4 +6,6 @@ interface IUser {
   about: string
   github?: string
   linkedIn?: string
+  profileImg?: string
+  bannerImg?: string
 }

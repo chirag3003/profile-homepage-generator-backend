@@ -25,6 +25,12 @@ const userSchema = new mongoose.Schema(
     linkedIn: {
       type: String,
     },
+    profileImg: {
+      type: String,
+    },
+    bannerImg: {
+      type: String,
+    },
   },
   {
     timestamps: true,
