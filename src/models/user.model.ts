@@ -18,6 +18,10 @@ const userSchema = new mongoose.Schema(
     github: {
       type: String,
     },
+    about: {
+      type: String,
+      default: '',
+    },
     linkedIn: {
       type: String,
     },

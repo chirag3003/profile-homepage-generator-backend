@@ -10,7 +10,7 @@ export default class UserController implements IUserController {
     try {
       const body = createUserInputValidator.parse(req.body)
       const user = await userService.createUser(body)
-      res.send(user)
+      res.send({ user, files: req.filesData })
     } catch (err) {
       res
         .status(StatusCodes.INTERNAL_SERVER_ERROR)

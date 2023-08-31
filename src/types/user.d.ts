@@ -3,6 +3,7 @@ interface IUser {
   email: string
   name: string
   username: string
+  about: string
   github?: string
   linkedIn?: string
 }
